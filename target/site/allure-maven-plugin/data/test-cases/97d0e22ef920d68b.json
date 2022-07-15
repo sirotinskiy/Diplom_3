@@ -1,0 +1,56 @@
+{
+  "uid" : "97d0e22ef920d68b",
+  "name" : "Переход к разделу булки",
+  "fullName" : "constructor.ConstructorTest.goToTheBunsSection",
+  "historyId" : "1ada484ed04f3412587ce76b78208265",
+  "time" : {
+    "start" : 1657898644091,
+    "stop" : 1657898644360,
+    "duration" : 269
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "constructor"
+  }, {
+    "name" : "testClass",
+    "value" : "constructor.ConstructorTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "goToTheBunsSection"
+  }, {
+    "name" : "suite",
+    "value" : "constructor.ConstructorTest"
+  }, {
+    "name" : "host",
+    "value" : "Vladimirs-MacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "63013@Vladimirs-MacBook-Pro.local.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "97d0e22ef920d68b.json",
+  "parameterValues" : [ ]
+}

@@ -4,9 +4,7 @@ import api.model.User;
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.junit4.DisplayName;
 import org.apache.commons.lang3.RandomStringUtils;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import page_object.*;
 
 import static api.client.CreateUser.createUser;
@@ -17,24 +15,18 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class PersonalAccountTest {
-    private MainScreenPage mainScreenPage;
-    private LoginScreenPage loginScreenPage;
-    private RegistrationScreenPage registrationScreenPage;
+    private  MainScreenPage mainScreenPage;
+    private  LoginScreenPage loginScreenPage;
+    private  RegistrationScreenPage registrationScreenPage;
 
-    private PersonalAreaScreenPage personalAreaScreenPage;
+    private  PersonalAreaScreenPage personalAreaScreenPage;
 
     private User user;
 
     private String token = "";
 
     @Before
-    public void setUp() {
-        mainScreenPage = open(BASE_URL, MainScreenPage.class);
-        loginScreenPage = open(BASE_URL, LoginScreenPage.class);
-        registrationScreenPage = open(BASE_URL, RegistrationScreenPage.class);
-        personalAreaScreenPage = open(BASE_URL,PersonalAreaScreenPage.class);
-        WebDriverRunner.getWebDriver().manage().window().fullscreen();
-
+    public void setUp(){
         user = User.builder()
                 .email(new StringBuilder(RandomStringUtils.randomAlphabetic(5) + "@ggmail.com").toString().toLowerCase())
                 .password(RandomStringUtils.randomAlphabetic(7))
@@ -42,12 +34,17 @@ public class PersonalAccountTest {
                 .build();
 
         token = createUser(user).extract().path("accessToken");
+
+        mainScreenPage = open(BASE_URL, MainScreenPage.class);
+        loginScreenPage = open(BASE_URL, LoginScreenPage.class);
+        registrationScreenPage = open(BASE_URL, RegistrationScreenPage.class);
+        personalAreaScreenPage = open(BASE_URL,PersonalAreaScreenPage.class);
+        WebDriverRunner.getWebDriver().manage().window().fullscreen();
     }
 
     @After
     public void shutDown(){
         WebDriverRunner.closeWebDriver();
-
         if(!token.isEmpty()){
             deleteUser(token);
         }

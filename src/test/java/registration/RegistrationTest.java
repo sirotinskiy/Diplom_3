@@ -4,9 +4,7 @@ import api.model.User;
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.junit4.DisplayName;
 import org.apache.commons.lang3.RandomStringUtils;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import page_object.LoginScreenPage;
 import page_object.MainScreenPage;
 import page_object.RegistrationScreenPage;
@@ -20,16 +18,16 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class RegistrationTest {
 
-    private MainScreenPage mainScreenPage;
-    private LoginScreenPage loginScreenPage;
-    private RegistrationScreenPage registrationScreenPage;
+    private static MainScreenPage mainScreenPage;
+    private static LoginScreenPage loginScreenPage;
+    private static RegistrationScreenPage registrationScreenPage;
 
     private User user;
 
     private String token = "";
 
-    @Before
-    public void setUp() throws InterruptedException {
+    @BeforeClass
+    public static void setUp(){
         mainScreenPage = open(BASE_URL, MainScreenPage.class);
         loginScreenPage = open(BASE_URL, LoginScreenPage.class);
         registrationScreenPage = open(BASE_URL, RegistrationScreenPage.class);
@@ -39,11 +37,14 @@ public class RegistrationTest {
 
     @After
     public void shutDown(){
-        WebDriverRunner.closeWebDriver();
-
         if(!token.isEmpty()){
             deleteUser(token);
         }
+    }
+
+    @AfterClass
+    public static void shutDownClass(){
+        WebDriverRunner.closeWebDriver();
     }
 
     @Test

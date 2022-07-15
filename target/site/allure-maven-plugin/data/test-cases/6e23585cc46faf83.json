@@ -1,0 +1,126 @@
+{
+  "uid" : "6e23585cc46faf83",
+  "name" : "Регистрация с валидными данными",
+  "fullName" : "registration.RegistrationTest.successRegistrationUser",
+  "historyId" : "8adff2b54e314aef7e91dabb970c5405",
+  "time" : {
+    "start" : 1657898563537,
+    "stop" : 1657898578138,
+    "duration" : 14601
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Create user",
+      "time" : {
+        "start" : 1657898564850,
+        "stop" : 1657898569899,
+        "duration" : 5049
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "name",
+        "value" : "HMmknjF"
+      }, {
+        "name" : "email",
+        "value" : "ktopm@ggmail.com"
+      }, {
+        "name" : "password",
+        "value" : "jyrcCpT"
+      } ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST login user ",
+      "time" : {
+        "start" : 1657898570678,
+        "stop" : 1657898576322,
+        "duration" : 5644
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "user",
+        "value" : "User(password=jyrcCpT, name=null, email=ktopm@ggmail.com)"
+      } ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "DELETE user",
+      "time" : {
+        "start" : 1657898577689,
+        "stop" : 1657898578131,
+        "duration" : 442
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "bearerToken",
+        "value" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZDE4NjRhOTNlYmMyMDAxYjRhMjEzZCIsImlhdCI6MTY1Nzg5ODU3NiwiZXhwIjoxNjU3ODk5Nzc2fQ.wmqcj0NwJwZeGA9PEfCoFcPk7RBcm_XlvETvKpFnM1o"
+      } ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 3,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "registration"
+  }, {
+    "name" : "testClass",
+    "value" : "registration.RegistrationTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "successRegistrationUser"
+  }, {
+    "name" : "suite",
+    "value" : "registration.RegistrationTest"
+  }, {
+    "name" : "host",
+    "value" : "Vladimirs-MacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "63013@Vladimirs-MacBook-Pro.local.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "6e23585cc46faf83.json",
+  "parameterValues" : [ ]
+}

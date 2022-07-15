@@ -31,14 +31,7 @@ public class LoginUserTest {
     private String token = "";
 
     @Before
-    public void setUp() throws InterruptedException {
-        mainScreenPage = open(BASE_URL, MainScreenPage.class);
-        loginScreenPage = open(BASE_URL, LoginScreenPage.class);
-        registrationScreenPage = open(BASE_URL, RegistrationScreenPage.class);
-        personalAreaScreenPage = open(BASE_URL,PersonalAreaScreenPage.class);
-        passwordRecoveryScreenPage = open(BASE_URL,PasswordRecoveryScreenPage.class);
-        WebDriverRunner.getWebDriver().manage().window().fullscreen();
-
+    public void setUp(){
         user = User.builder()
                 .email(new StringBuilder(RandomStringUtils.randomAlphabetic(5) + "@ggmail.com").toString().toLowerCase())
                 .password(RandomStringUtils.randomAlphabetic(7))
@@ -46,6 +39,13 @@ public class LoginUserTest {
                 .build();
 
         token = createUser(user).extract().path("accessToken");
+
+        mainScreenPage = open(BASE_URL, MainScreenPage.class);
+        loginScreenPage = open(BASE_URL, LoginScreenPage.class);
+        registrationScreenPage = open(BASE_URL, RegistrationScreenPage.class);
+        personalAreaScreenPage = open(BASE_URL,PersonalAreaScreenPage.class);
+        passwordRecoveryScreenPage = open(BASE_URL,PasswordRecoveryScreenPage.class);
+        WebDriverRunner.getWebDriver().manage().window().fullscreen();
     }
 
     @After

@@ -1,0 +1,123 @@
+{
+  "uid" : "959c03626bdcabb2",
+  "name" : "Переход по клику на «Stellar Burgers» из личного кабинета.",
+  "fullName" : "personalaccount.PersonalAccountTest.clickingOnStellarBurgers",
+  "historyId" : "17ee108f263dd26ebf8b1958ae2980fc",
+  "time" : {
+    "start" : 1657898673232,
+    "stop" : 1657898686882,
+    "duration" : 13650
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST create user ",
+      "time" : {
+        "start" : 1657898673232,
+        "stop" : 1657898673556,
+        "duration" : 324
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "user",
+        "value" : "User(password=ZxmLSqq, name=MZXFYGv, email=xqpmm@ggmail.com)"
+      } ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Login user",
+      "time" : {
+        "start" : 1657898678809,
+        "stop" : 1657898681267,
+        "duration" : 2458
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "xqpmm@ggmail.com"
+      }, {
+        "name" : "password",
+        "value" : "ZxmLSqq"
+      } ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "DELETE user",
+      "time" : {
+        "start" : 1657898686499,
+        "stop" : 1657898686881,
+        "duration" : 382
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "bearerToken",
+        "value" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZDE4NmIxOTNlYmMyMDAxYjRhMjE1MiIsImlhdCI6MTY1Nzg5ODY3MywiZXhwIjoxNjU3ODk5ODczfQ.nA6KzEQLWPrtzRSIDtDsZE6GyPHNFLJp_NU0UnRMc3A"
+      } ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 3,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "personalaccount"
+  }, {
+    "name" : "testClass",
+    "value" : "personalaccount.PersonalAccountTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "clickingOnStellarBurgers"
+  }, {
+    "name" : "suite",
+    "value" : "personalaccount.PersonalAccountTest"
+  }, {
+    "name" : "host",
+    "value" : "Vladimirs-MacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "63013@Vladimirs-MacBook-Pro.local.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "959c03626bdcabb2.json",
+  "parameterValues" : [ ]
+}
