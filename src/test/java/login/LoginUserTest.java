@@ -1,12 +1,11 @@
 package login;
 
 import api.model.User;
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.junit4.DisplayName;
 import org.apache.commons.lang3.RandomStringUtils;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import page_object.*;
 
 import static api.client.CreateUser.createUser;
@@ -39,6 +38,9 @@ public class LoginUserTest {
                 .build();
 
         token = createUser(user).extract().path("accessToken");
+
+
+        Configuration.browser = "chrome";
 
         mainScreenPage = open(BASE_URL, MainScreenPage.class);
         loginScreenPage = open(BASE_URL, LoginScreenPage.class);

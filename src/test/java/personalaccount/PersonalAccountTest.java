@@ -1,6 +1,7 @@
 package personalaccount;
 
 import api.model.User;
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.junit4.DisplayName;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -34,6 +35,8 @@ public class PersonalAccountTest {
                 .build();
 
         token = createUser(user).extract().path("accessToken");
+
+        Configuration.browser = "chrome";
 
         mainScreenPage = open(BASE_URL, MainScreenPage.class);
         loginScreenPage = open(BASE_URL, LoginScreenPage.class);

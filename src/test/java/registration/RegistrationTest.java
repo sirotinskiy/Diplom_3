@@ -1,6 +1,7 @@
 package registration;
 
 import api.model.User;
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.junit4.DisplayName;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -28,6 +29,10 @@ public class RegistrationTest {
 
     @BeforeClass
     public static void setUp(){
+
+        Configuration.browser = "chrome";
+
+
         mainScreenPage = open(BASE_URL, MainScreenPage.class);
         loginScreenPage = open(BASE_URL, LoginScreenPage.class);
         registrationScreenPage = open(BASE_URL, RegistrationScreenPage.class);
@@ -77,7 +82,7 @@ public class RegistrationTest {
 
     @Test
     @DisplayName("Регистрация с невалидными паролем (менее 5 знаков)")
-    public void RegistrationUserWithAShortPassword(){
+    public void registrationUserWithAShortPassword(){
         String expectErrorMessage = "Некорректный пароль";
 
         user = User.builder()

@@ -1,5 +1,6 @@
 package constructor;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.*;
@@ -14,6 +15,8 @@ public class ConstructorTest {
     private static MainScreenPage mainScreenPage;
     @BeforeClass
     public static void setUp() {
+        Configuration.browser = "chrome";
+
         mainScreenPage = open(BASE_URL, MainScreenPage.class);
         WebDriverRunner.getWebDriver().manage().window().fullscreen();
     }
